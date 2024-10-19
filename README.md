@@ -111,3 +111,36 @@ git push origin master
 ```
 
 - Paste the link of your lab in Student Portal.
+
+
+
+## Desafío 1
+
+1. Debe utilizar las funciones integradas de SQL para obtener información relacionada con la duración de las películas:
+- 1.1 Determine las **duraciones más cortas y más largas de las películas** y nombre los valores como `max_duration` y `min_duration`.
+- 1.2. Exprese la **duración promedio de las películas en horas y minutos**. No utilice decimales.
+- *Sugerencia: busque funciones de piso y redondeo.*
+2. Debe obtener información relacionada con las fechas de alquiler:
+- 2.1 Calcule la **cantidad de días que la empresa ha estado operando**.
+- *Sugerencia: para ello, utilice la tabla `rental` y la función `DATEDIFF()` para restar la fecha más temprana en la columna `rental_date` de la fecha más reciente.*
+- 2.2 Recupere la información de alquiler y agregue dos columnas adicionales para mostrar el **mes y el día de la semana del alquiler**. Devuelva 20 filas de resultados.
+- 2.3 *Bonus: recupera la información de alquiler y agrega una columna adicional llamada `DAY_TYPE` con los valores **'weekend' o 'workday'**, según el día de la semana.*
+- *Sugerencia: usa una expresión condicional.*
+3. Debes asegurarte de que los clientes puedan acceder fácilmente a la información sobre la colección de películas. Para lograr esto, recupera los **títulos de las películas y su duración de alquiler**. Si algún valor de duración de alquiler es **NULL, reemplázalo** con la cadena **'Not Available'**. Ordena los resultados del título de la película en orden ascendente.
+- *Ten en cuenta que incluso si actualmente no hay valores nulos en la columna de duración de alquiler, la consulta debe escribirse de todas formas para manejar tales casos en el futuro.*
+- *Sugerencia: busca la función `IFNULL()`.*
+
+4. *Bonus: el equipo de marketing de la empresa de alquiler de películas ahora necesita crear una campaña de correo electrónico personalizada para los clientes. Para lograrlo, es necesario recuperar los **nombres y apellidos concatenados de los clientes**, junto con los **primeros 3 caracteres de su dirección de correo electrónico**, de modo que pueda dirigirse a ellos por su nombre y utilizar su dirección de correo electrónico para enviar recomendaciones personalizadas. Los resultados deben ordenarse por apellido en orden ascendente para facilitar el uso de los datos.*
+
+
+## Desafío 2
+
+1. A continuación, debe analizar las películas de la colección para obtener más información. Con la tabla `películas`, determine:
+- 1.1 El **número total de películas** que se han estrenado.
+- 1.2 El **número de películas para cada clasificación**.
+- 1.3 El **número de películas para cada clasificación, ordenando** los resultados en orden descendente según el número de películas.
+Esto le ayudará a comprender mejor la popularidad de las diferentes clasificaciones de películas y a ajustar las decisiones de compra en consecuencia.
+2. Con la tabla `películas`, determine:
+- 2.1 La **duración media de las películas para cada clasificación** y ordene los resultados en orden descendente según la duración media. Redondee las duraciones medias a dos decimales. Esto le ayudará a identificar las duraciones de películas más populares para cada categoría.
+- 2.2 Identifique **qué clasificaciones tienen una duración media de más de dos horas** para ayudar a seleccionar películas para los clientes que prefieren películas más largas.
+3. *Bonus: determina cuáles apellidos no se repiten en la tabla `actor`.*
